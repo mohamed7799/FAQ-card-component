@@ -51,6 +51,14 @@ main > * {
           flex: 1;
 }
 
+.desktop {
+  display: block;
+}
+
+.mobile {
+  display: none;
+}
+
 .img-section {
   overflow: hidden;
 }
@@ -129,4 +137,43 @@ hr {
 
 .shown {
   display: block;
+}
+
+@media screen and (max-width: 800px) {
+  main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 10rem;
+    width: 90%;
+  }
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+  .abs-box {
+    display: none;
+  }
+  .img-container {
+    padding: 0;
+    -webkit-transform: translateX(-10%);
+            transform: translateX(-10%);
+    background: none;
+  }
+  .img-section {
+    overflow: visible;
+    width: 80%;
+    -webkit-transform: translateY(-40%);
+            transform: translateY(-40%);
+  }
+  .faq-section {
+    padding: 0;
+    width: 80%;
+  }
+  .faq-section h1 {
+    text-align: center;
+  }
 }

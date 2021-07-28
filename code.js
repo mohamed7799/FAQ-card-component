@@ -25,18 +25,20 @@ let reset = () => {
 
 }
 
-// event listenrs
+// event listner
+window.addEventListener('click', function (e) {
+    if (faq_section.contains(e.target)) {
+        // click inside the container
+        let arrow = e.target;
+        reset();
+        if (check(arrow, "arrow-js")) {
+            toggle(arrow, "arrow-up");
+            let hiddenTarget = arrow.parentElement.nextElementSibling;
+            toggle(hiddenTarget, "hidden");
 
-faq_section.addEventListener("click", (eve) => {
-    let arrow = eve.target;
-    let hiddenTarget = arrow.parentElement.nextElementSibling;
-    reset();
-    if (check(arrow, "arrow-js")) {
-        toggle(arrow, "arrow-up");
-        toggle(hiddenTarget, "hidden");
-
+        }
+    } else {
+        //click outside the container
+        reset();
     }
-    else {
-        reset()
-    }
-})
+});
