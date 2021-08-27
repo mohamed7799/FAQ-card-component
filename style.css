@@ -76,13 +76,6 @@ main > * {
   width: 100%;
 }
 
-.abs-box {
-  position: absolute;
-  top: 35%;
-  left: -14%;
-  z-index: 1;
-}
-
 .faq-section {
   color: #1d1e35;
   padding-right: 6rem;
@@ -98,6 +91,7 @@ main > * {
 }
 
 .quest {
+  cursor: pointer;
   font-weight: bolder;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -153,9 +147,6 @@ hr {
   }
   .mobile {
     display: block;
-  }
-  .abs-box {
-    display: none;
   }
   .img-container {
     padding: 0;
